@@ -26,8 +26,8 @@ Hybrid AI-based system that detects code similarity using:
 - AST Parsing
 
 ## How to Run Locally
-pip install -r requirements.txt
-python main.py
+- pip install -r requirements.txt
+- python main.py
 
 
 Then open:
@@ -37,4 +37,5 @@ http://127.0.0.1:5000/
 - Tree Edit Distance structural comparison
 - Multi-language support
 - REST API mode
+
 - Cloud deployment
