@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Code Similarity Engine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+            margin: 0;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        textarea {
+            width: 450px;
+            height: 250px;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            font-family: monospace;
+            font-size: 14px;
+            background: #1e293b;
+            color: white;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            background: #3b82f6;
+            color: white;
+        }
+
+        .results {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .bar-container {
+            width: 60%;
+            margin: 20px auto;
+            background: #1e293b;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .bar {
+            height: 25px;
+            text-align: right;
+            padding-right: 10px;
+            line-height: 25px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .semantic { background: #3b82f6; }
+        .structural { background: #10b981; }
+        .final { background: #f59e0b; }
+
+        .verdict {
+            margin-top: 25px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .confidence {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #cbd5e1;
+        }
+
+        pre {
+            background: #1e293b;
+            padding: 15px;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+
+        .diff-added { background-color: #064e3b; }
+        .diff-removed { background-color: #7f1d1d; }
+    </style>
+</head>
+<body>
+
+<h1>AI Code Plagiarism Detection System</h1>
+
+<form action="/analyze" method="post">
+    <div class="container">
+        <textarea name="code1" placeholder="Paste Code 1 here..." required></textarea>
+        <textarea name="code2" placeholder="Paste Code 2 here..." required></textarea>
+    </div>
+
+    <div style="text-align:center;">
+        <button type="submit">Analyze Similarity</button>
+    </div>
+</form>
+
+{% if semantic %}
+<div class="results">
+
+    <h2>Similarity Scores</h2>
+
+    <div>Semantic Similarity ({{ semantic * 100 }}%)</div>
+    <div class="bar-container">
+        <div class="bar semantic" style="width: {{ semantic * 100 }}%">
+            {{ semantic * 100 }}%
+        </div>
+    </div>
+
+    <div>Structural Similarity ({{ structural * 100 }}%)</div>
+    <div class="bar-container">
+        <div class="bar structural" style="width: {{ structural * 100 }}%">
+            {{ structural * 100 }}%
+        </div>
+    </div>
+
+    <div>Final Score ({{ final * 100 }}%)</div>
+    <div class="bar-container">
+        <div class="bar final" style="width: {{ final * 100 }}%">
+            {{ final * 100 }}%
+        </div>
+    </div>
+
+    <div class="verdict">
+        {{ verdict }}
+    </div>
+
+    <div class="confidence">
+        Confidence Level: {{ confidence }}
+    </div>
+
+    <h2>Code Differences</h2>
+    <pre>{{ diff_output|safe }}</pre>
+
+</div>
+{% endif %}
+
+</body>
+</html>
