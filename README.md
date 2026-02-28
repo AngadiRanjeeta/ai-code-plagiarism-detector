@@ -18,6 +18,15 @@ Hybrid AI-based system that detects code similarity using:
 - Code diff highlighting
 - Modern UI
 
+## Interface
+
+  ![WhatsApp Image 2026-02-28 at 00 50 07](https://github.com/user-attachments/assets/010f0159-c658-4f65-91e6-10e7ce9b9168)
+  ![WhatsApp Image 2026-02-28 at 00 50 38](https://github.com/user-attachments/assets/32524715-67ee-4d4f-83e1-284fb8f93cb8)
+  ![WhatsApp Image 2026-02-28 at 00 51 05](https://github.com/user-attachments/assets/78472c83-87a5-40e2-b587-40d400add574)
+
+
+
+
 ## Tech Stack
 - Python
 - Flask
@@ -39,4 +48,5 @@ http://127.0.0.1:5000/
 - REST API mode
 
 - Cloud deployment
+
 
