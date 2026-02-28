@@ -20,9 +20,14 @@ Hybrid AI-based system that detects code similarity using:
 
 ## Interface
 
-  ![WhatsApp Image 2026-02-28 at 00 50 07](https://github.com/user-attachments/assets/010f0159-c658-4f65-91e6-10e7ce9b9168)
-  ![WhatsApp Image 2026-02-28 at 00 50 38](https://github.com/user-attachments/assets/32524715-67ee-4d4f-83e1-284fb8f93cb8)
-  ![WhatsApp Image 2026-02-28 at 00 51 05](https://github.com/user-attachments/assets/78472c83-87a5-40e2-b587-40d400add574)
+![WhatsApp Image 2026-02-28 at 14 26 03](https://github.com/user-attachments/assets/be7e1a76-804b-49ae-bb21-e816ec7497d1)
+![WhatsApp Image 2026-02-28 at 14 26 27](https://github.com/user-attachments/assets/d4a3176a-8d71-4611-976f-9ca03b8df45f)
+![WhatsApp Image 2026-02-28 at 14 26 56](https://github.com/user-attachments/assets/096bc516-759e-40c9-b534-892a3bfba5a6)
+
+
+
+
+ 
 
 
 
@@ -48,5 +53,6 @@ http://127.0.0.1:5000/
 - REST API mode
 
 - Cloud deployment
+
 
 
