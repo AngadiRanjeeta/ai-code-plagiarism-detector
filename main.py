@@ -20,28 +20,28 @@ def analyze():
     code1 = request.form["code1"]
     code2 = request.form["code2"]
 
-    # ---------------------------
+    
     # Semantic Similarity
-    # ---------------------------
+    
     emb1 = model.encode(code1)
     emb2 = model.encode(code2)
     semantic_score = compute_similarity(emb1, emb2)
 
-    # ---------------------------
+   
     # Structural Similarity (AST)
-    # ---------------------------
+    
     ast1 = get_normalized_ast(code1)
     ast2 = get_normalized_ast(code2)
     struct_score = structural_similarity(ast1, ast2)
 
-    # ---------------------------
+    
     # Hybrid Final Score
-    # ---------------------------
+    
     final_score = 0.7 * semantic_score + 0.3 * struct_score
 
-    # ---------------------------
+    
     # Verdict + Confidence
-    # ---------------------------
+   
     if final_score > 0.85:
         verdict = "⚠ Highly Likely Plagiarized"
         confidence = "High Confidence"
@@ -52,9 +52,9 @@ def analyze():
         verdict = "✓ Likely Different"
         confidence = "Low Similarity"
 
-    # ---------------------------
+    
     # Code Diff Highlighting
-    # ---------------------------
+    
     diff = difflib.ndiff(code1.splitlines(), code2.splitlines())
 
     diff_html = ""
@@ -78,4 +78,5 @@ def analyze():
 
 
 if __name__ == "__main__":
+
     app.run(debug=True)
