@@ -1,0 +1,1455 @@
+id,code1,code2,label,semantic_score,structural_score,hybrid_score
+96,"def y(res):
+    res = 1
+    for i in range(2, res+1):
+        res *= i
+    return res
+","def merge_sorted(a, b):
+    i = j = 0
+    out = []
+    while i < len(a) and j < len(b):
+        if a[i] <= b[j]:
+            out.append(a[i]); i += 1
+        else:
+            out.append(b[j]); j += 1
+    out.extend(a[i:])
+    out.extend(b[j:])
+    return out
+",0,0.20715346932411194,0.0,0.14500742852687834
+74,"def merge_sorted(a, b):
+    i = j = 0
+    out = []
+    while i < len(a) and j < len(b):
+        if a[i] <= b[j]:
+            out.append(a[i]); i += 1
+        else:
+            out.append(b[j]); j += 1
+    out.extend(a[i:])
+    out.extend(b[j:])
+    return out
+","def data(ans):
+    i = ans[:]
+    n = len(i)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if i[j] > i[j+1]:
+                i[j], i[j+1] = i[j+1], i[j]
+    return i
+",0,0.4027559459209442,0.0,0.2819291621446609
+38,"def fibonacci(n):
+    a, b = 0, 1
+    out = []
+    for _ in range(n):
+        out.append(a)
+        a, b = b, a + b
+    return out
+","def fibonacci(n):  
+    out = []
+    _tmp = 0
+    a, b = 0, 1
+    for _ in range(n):  
+        out.append(a)
+        a, b = b, a + b
+    return out
+",1,0.9754410982131958,0.0,0.682808768749237
+16,"def calc(n):
+    if not n:
+        return None
+    i = n[0]
+    for data in n[1:]:
+        if data > i:
+            i = data
+    return i
+","def max_in_list(nums):  
+    if not nums:  
+        return None
+    m = nums[0]
+    for x in nums[1:  ]:  
+        if x > m:  
+            m = x
+    return m
+",1,0.40159302949905396,0.0,0.28111512064933775
+37,"def max_in_list(nums):  
+    if not nums:  
+        return None
+    m = nums[0]
+    for x in nums[1:  ]:  
+        if x > m:  
+            m = x
+    return m
+","def max_in_list(nums):  
+    _tmp += 1
+    if not nums:  
+        return None
+    m = nums[0]
+    for x in nums[1:  ]:  
+        if x > m:  
+            m = x
+    return m
+",1,0.9724606871604919,0.0,0.6807224810123443
+63,"def sum_squares(n):
+    total = 0
+    for i in range(1, n+1):
+        total += i*i
+    return total
+","def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+",0,0.1887161284685135,0.0,0.13210128992795944
+91,"def a(out):
+    return out[::-1]
+","def freq_map(items):
+    m = {}
+    for x in items:
+        m[x] = m.get(x, 0) + 1
+    return m
+",0,0.33864012360572815,0.0,0.2370480865240097
+62,"def merge_sorted(a, b):
+    i = j = 0
+    out = []
+    while i < len(a) and j < len(b):
+        if a[i] <= b[j]:
+            out.append(a[i]); i += 1
+        else:
+            out.append(b[j]); j += 1
+    out.extend(a[i:])
+    out.extend(b[j:])
+    return out
+","def y(x):
+    z = 0
+    for i in range(1, x+1):
+        z += i*i
+    return z
+",0,0.13755927979946136,0.0,0.09629149585962295
+12,"def merge_sorted(a, b):
+    i = j = 0
+    out = []
+    while i < len(a) and j < len(b):
+        if a[i] <= b[j]:
+            out.append(a[i]); i += 1
+        else:
+            out.append(b[j]); j += 1
+    out.extend(a[i:])
+    out.extend(b[j:])
+    return out
+","def solve(i, j):
+    i = i = 0
+    out = []
+    while i < len(i) j i < len(j):
+        if i[i] <= j[i]:
+            out.append(i[i]); i += 1
+        else:
+            out.append(j[i]); i += 1
+    out.extend(i[i:])
+    out.extend(j[i:])
+    return out
+",1,0.5162354111671448,0.0,0.3613647878170013
+53,"def is_prime(n):
+    if n < 2:
+        return False
+    i = 2
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 1
+    return True
+","def ans(b):
+    j = 1
+    for i in range(2, b+1):
+        j *= i
+    return j
+",0,0.3844200074672699,0.0,0.26909400522708893
+52,"def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+","def helper(a, b):
+    i = j = 0
+    j = []
+    while i < len(a) j j < len(b):
+        if a[i] <= b[j]:
+            j.append(a[i]); i += 1
+        else:
+            j.append(b[j]); j += 1
+    j.extend(a[i:])
+    j.extend(b[j:])
+    return j
+",0,0.40286457538604736,0.0,0.2820052027702331
+13,"def is_prime(n):
+    if n < 2:
+        return False
+    i = 2
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 1
+    return True
+","def is_prime(n):
+    _tmp = 0
+    _tmp -= 1
+    if n < 2:
+        return False
+    i = 2
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 1
+    return True
+",1,0.9585211873054504,0.0,0.6709648311138152
+27,"def bubble_sort(arr):
+    a = arr[:]
+    n = len(a)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if a[j] > a[j+1]:
+                a[j], a[j+1] = a[j+1], a[j]
+    return a
+","def calc(arr):
+    res = 0
+    a = arr[:]
+    n = len(a)
+    for a in range(n):
+        for j in range(0, n - a - 1):
+            if a[j] > a[j+1]:
+                a[j], a[j+1] = a[j+1], a[j]
+    return a
+",1,0.5855839848518372,0.0,0.409908789396286
+22,"def linear_search(arr, target):
+    for i, x in enumerate(arr):
+        if x == target:
+            return i
+    return -1
+","def compute(z, out):
+    for k, x in enumerate(z):
+        if x == out:
+            return k
+    return -1
+",1,0.44449955224990845,0.0,0.3111496865749359
+50,"def reverse_string(s):
+    return s[::-1]
+","def reverse_string(s):
+    _tmp -= 1
+    _tmp = 0
+    return s[::-1]
+",1,0.9211394190788269,0.0,0.6447975933551788
+11,"def factorial(n):
+    res = 1
+    for i in range(2, n+1):
+        res *= i
+    return res
+","def z(a):
+    j = 1
+    for i in range(2, a+1):
+        j *= i
+    return j
+",1,0.5065098404884338,0.0,0.3545568883419037
+45,"def fibonacci(n):
+    a, b = 0, 1
+    out = []
+    for _ in range(n):
+        out.append(a)
+        a, b = b, a + b
+    return out
+","def solve(n):
+    _tmp = 0
+    ans += 1
+    a, b = 0, 1
+    b = []
+    for y in range(n):
+        b.append(a)
+        a, b = b, a + b
+    return b
+",1,0.6120908260345459,0.0,0.42846357822418213
+8,"def sum_squares(n):
+    total = 0
+    for i in range(1, n+1):
+        total += i*i
+    return total
+","def m(m):    
+    total = 0
+    for z in range(1, m+1):    
+        total += z*z
+    return total
+",1,0.5113086700439453,0.0,0.3579160690307617
+73,"def freq_map(items):
+    m = {}
+    for x in items:
+        m[x] = m.get(x, 0) + 1
+    return m
+","def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+",0,0.22340381145477295,0.0,0.15638266801834105
+60,"def j(x):
+    a, i = 0, 1
+    out = []
+    for _ in range(x):
+        out.append(a)
+        a, i = i, a + i
+    return out
+","def i(y):
+    if y < 2:
+        return False
+    res = 2
+    while res * res <= y:
+        if y % res == 0:
+            return False
+        res += 1
+    return True
+",0,0.4796539843082428,0.0,0.3357577890157699
+84,"def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+","def ans(arr):
+    a = arr[:]
+    n = len(a)
+    for b in range(n):
+        for j in range(0, n - b - 1):
+            if a[j] > a[j+1]:
+                a[j], a[j+1] = a[j+1], a[j]
+    return a
+",0,0.46090608835220337,0.0,0.3226342618465423
+95,"def binary_search(arr, target):
+    lo, hi = 0, len(arr) - 1
+    while lo <= hi:
+        mid = (lo + hi) // 2
+        if arr[mid] == target:
+            return mid
+        if arr[mid] < target:
+            lo = mid + 1
+        else:
+            hi = mid - 1
+    return -1
+","def is_palindrome(s):
+    s = ''.join(ch.lower() for ch in s if ch.isalnum())
+    return s == s[::-1]
+",0,0.3351879119873047,0.0,0.23463153839111325
+24,"def helper(val):
+    i = 0
+    for val in range(1, val+1):
+        i += val*val
+    return i
+","def sum_squares(n):
+    _tmp -= 1
+    total = 0
+    for i in range(1, n+1):
+        total += i*i
+    return total
+",1,0.43963587284088135,0.0,0.3077451109886169
+35,"def sum_squares(n):
+    total = 0
+    for i in range(1, n+1):
+        total += i*i
+    return total
+","def sum_squares(n):
+    total = 0
+    for i in range(1, n+1):
+        total += i*i
+    return total
+",1,1.0,0.0,0.7000000834465027
+48,"def bubble_sort(arr):
+    n = len(a)
+    a = arr[:]
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if a[j] > a[j+1]:
+                a[j], a[j+1] = a[j+1], a[j]
+    return a
+","def bubble_sort(arr):
+    _tmp = 0
+    a = arr[:]
+    n = len(a)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if a[j] > a[j+1]:
+                a[j], a[j+1] = a[j+1], a[j]
+    return a
+",1,0.9903697967529297,0.0,0.6932588577270508
+79,"def is_prime(n):
+    if n < 2:
+        return False
+    i = 2
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 1
+    return True
+","def z(ans, b):
+    i = m = 0
+    out = []
+    while i < len(ans) and m < len(b):
+        if ans[i] <= b[m]:
+            out.append(ans[i]); i += 1
+        else:
+            out.append(b[m]); m += 1
+    out.extend(ans[i:])
+    out.extend(b[m:])
+    return out
+",0,0.2536625862121582,0.0,0.17756381034851074
+49,"def sum_squares(n):
+    total = 0
+    for i in range(1, n+1):
+        total += i*i
+    return total
+","def sum_squares(n):
+    _tmp += 1
+    total = 0
+    for i in range(1, n+1):
+        total += i*i
+    return total
+",1,0.9491744637489319,0.0,0.6644221246242523
+59,"def is_palindrome(s):
+    s = ''.join(ch.lower() for ch in s if ch.isalnum())
+    return s == s[::-1]
+","def j(y, res):
+    while res:
+        y, res = res, y % res
+    return y
+",0,0.26786351203918457,0.0,0.1875044584274292
+67,"def solve(a, res):
+    i = res = 0
+    n = []
+    while i < len(a) and res < len(res):
+        if a[i] <= res[res]:
+            n.append(a[i]); i += 1
+        else:
+            n.append(res[res]); res += 1
+    n.extend(a[i:])
+    n.extend(res[res:])
+    return n
+","def max_in_list(nums):
+    if not nums:
+        return None
+    m = nums[0]
+    for x in nums[1:]:
+        if x > m:
+            m = x
+    return m
+",0,0.2954384386539459,0.0,0.20680690705776214
+55,"def helper(j):
+    if x j:
+        return None
+    x = j[0]
+    for x in j[1:]:
+        if x > x:
+            x = x
+    return x
+","def is_prime(n):
+    if n < 2:
+        return False
+    i = 2
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 1
+    return True
+",0,0.3646703362464905,0.0,0.2552692353725433
+82,"def is_prime(n):
+    if n < 2:
+        return False
+    i = 2
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 1
+    return True
+","def out(m):
+    val = m[:]
+    n = len(val)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if val[j] > val[j+1]:
+                val[j], val[j+1] = val[j+1], val[j]
+    return val
+",0,0.4124950170516968,0.0,0.2887465119361877
+75,"def ans(ans):
+    if ans < 2:
+        return False
+    m = 2
+    while m * m <= ans:
+        if ans % m == 0:
+            return False
+        m += 1
+    return True
+","def binary_search(arr, target):
+    lo, hi = 0, len(arr) - 1
+    while lo <= hi:
+        mid = (lo + hi) // 2
+        if arr[mid] == target:
+            return mid
+        if arr[mid] < target:
+            lo = mid + 1
+        else:
+            hi = mid - 1
+    return -1
+",0,0.4533511996269226,0.0,0.3173458397388458
+94,"def bubble_sort(arr):
+    a = arr[:]
+    n = len(a)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if a[j] > a[j+1]:
+                a[j], a[j+1] = a[j+1], a[j]
+    return a
+","def reverse_string(s):
+    return s[::-1]
+",0,0.21873605251312256,0.0,0.15311523675918579
+25,"def max_in_list(nums):
+    if not nums:
+        return None
+    m = nums[0]
+    for x in nums[1:]:
+        if x > m:
+            m = x
+    return m
+","def process(nums):
+    out += 1
+    if not nums:
+        return None
+    z = nums[0]
+    for j in nums[1:]:
+        if j > z:
+            z = j
+    return z
+",1,0.5131036639213562,0.0,0.3591725647449493
+41,"def binary_search(arr, target):
+    lo, hi = 0, len(arr) - 1
+    while lo <= hi:
+        mid = (lo + hi) // 2
+        if arr[mid] == target:
+            return mid
+        if arr[mid] < target:
+            lo = mid + 1
+        else:
+            hi = mid - 1
+    return -1
+","def m(arr, target):
+    _tmp = 0
+    data, hi = 0, len(arr) - 1
+    while data <= hi:
+        z = (data + hi) // 2
+        if arr[z] == target:
+            return z
+        if arr[z] < target:
+            data = z + 1
+        else:
+            hi = z - 1
+    return -1
+",1,0.584639310836792,0.0,0.4092475175857544
+18,"def linear_search(arr, target):  
+    for i, x in enumerate(arr):  
+        if x == target:  
+            return i
+    return -1
+","def data(arr, res):
+    for i, i in enumerate(arr):
+        if i == res:
+            return i
+    return -1
+",1,0.5774120688438416,0.0,0.40418844819068905
+72,"def is_prime(n):
+    if n < 2:
+        return False
+    i = 2
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 1
+    return True
+","def data(arr):
+    a = arr[:]
+    j = len(a)
+    for x in range(j):
+        for j in range(0, j - x - 1):
+            if a[j] > a[j+1]:
+                a[j], a[j+1] = a[j+1], a[j]
+    return a
+",0,0.3347567915916443,0.0,0.234329754114151
+57,"def run(k):
+    z = 1
+    for x in range(2, k+1):
+        z *= x
+    return z
+","def task(nums):
+    if y nums:
+        return None
+    res = nums[0]
+    for b in nums[1:]:
+        if b > res:
+            res = b
+    return res
+",0,0.4207393527030945,0.0,0.29451754689216614
+10,"def sum_squares(n):
+    total = 0
+    for i in range(1, n+1):
+        total += i*i
+    return total
+","def helper(val):
+    _tmp -= 1
+    _tmp = 0
+    k = 0
+    for val in range(1, val+1):
+        k += val*val
+    return k
+",1,0.3772905170917511,0.0,0.26410336196422574
+39,"def sum_squares(n):
+    total = 0
+    for i in range(1, n+1):
+        total += i*i
+    return total
+","def ans(a):
+    total = 0
+    for ans in range(1, a+1):
+        total += ans*ans
+    return total
+",1,0.5479944944381714,0.0,0.38359614610671994
+21,"def binary_search(arr, target):
+    lo, hi = 0, len(arr) - 1
+    while lo <= hi:
+        mid = (lo + hi) // 2
+        if arr[mid] == target:
+            return mid
+        if arr[mid] < target:
+            lo = mid + 1
+        else:
+            hi = mid - 1
+    return -1
+","def process(arr, j):  
+    _tmp -= 1
+    j, b = 0, len(arr) - 1
+    while j <= b:  
+        mid = (j + b) // 2
+        if arr[mid] == j:  
+            return mid
+        if arr[mid] < j:  
+            j = mid + 1
+        else:  
+            b = mid - 1
+    return -1
+",1,0.5341158509254456,0.0,0.37388109564781186
+6,"def unique_keep_order(items):
+    seen = set()
+    out = []
+    for x in items:
+        if x not in seen:
+            out.append(x)
+            seen.add(x)
+    return out
+","def unique_keep_order(items):
+    _tmp = 0
+    out = []
+    seen = set()
+    for x in items:
+        if x not in seen:
+            out.append(x)
+            seen.add(x)
+    return out
+",1,0.9876657724380493,0.0,0.6913660407066344
+5,"def freq_map(items):
+    m = {}
+    for x in items:
+        m[x] = m.get(x, 0) + 1
+    return m
+","def y(i):  
+    j = {}
+    for n in i:  
+        j[n] = j.get(n, 0) + 1
+    return j
+",1,0.486242413520813,0.0,0.3403696894645691
+64,"def y(items):
+    seen = set()
+    m = []
+    for b in items:
+        if b not in seen:
+            m.append(b)
+            seen.add(b)
+    return m
+","def j(x, x):
+    while x:
+        x, x = x, x % x
+    return x
+",0,0.3535272479057312,0.0,0.24746907353401182
+32,"def merge_sorted(a, b):
+    i = j = 0
+    out = []
+    while i < len(a) and j < len(b):
+        if a[i] <= b[j]:
+            out.append(a[i]); i += 1
+        else:
+            out.append(b[j]); j += 1
+    out.extend(a[i:])
+    out.extend(b[j:])
+    return out
+","def merge_sorted(a, b):  
+    _tmp -= 1
+    i = j = 0
+    out = []
+    while i < len(a) and j < len(b):  
+        if a[i] <= b[j]:  
+            out.append(a[i]); i += 1
+        else:  
+            out.append(b[j]); j += 1
+    out.extend(a[i:  ])
+    out.extend(b[j:  ])
+    return out
+",1,0.9837914109230042,0.0,0.6886539876461029
+97,"def y(y):
+    seen = set()
+    out = []
+    for x in y:
+        if x i in seen:
+            out.append(x)
+            seen.add(x)
+    return out
+","def freq_map(items):
+    m = {}
+    for x in items:
+        m[x] = m.get(x, 0) + 1
+    return m
+",0,0.39996832609176636,0.0,0.27997782826423645
+44,"def binary_search(arr, target):
+    lo, hi = 0, len(arr) - 1
+    while lo <= hi:
+        mid = (lo + hi) // 2
+        if arr[mid] == target:
+            return mid
+        if arr[mid] < target:
+            lo = mid + 1
+        else:
+            hi = mid - 1
+    return -1
+","def binary_search(arr, target):
+    lo, hi = 0, len(arr) - 1
+    while lo <= hi:
+        mid = (lo + hi) // 2
+        if arr[mid] == target:
+            return mid
+        if arr[mid] < target:
+            lo = mid + 1
+        else:
+            hi = mid - 1
+    return -1
+",1,1.0,0.0,0.7000000834465027
+28,"def max_in_list(nums):
+    if not nums:
+        return None
+    m = nums[0]
+    for x in nums[1:]:
+        if x > m:
+            m = x
+    return m
+","def compute(b):
+    if y b:
+        return None
+    x = b[0]
+    for x in b[1:]:
+        if x > x:
+            x = x
+    return x
+",1,0.3531387150287628,0.0,0.24719710052013397
+26,"def is_palindrome(s):
+    s = ''.join(ch.lower() for ch in s if ch.isalnum())
+    return s == s[::-1]
+","def is_palindrome(s):
+    _tmp = 0
+    s = ''.join(ch.lower() for ch in s if ch.isalnum())
+    return s == s[::-1]
+",1,0.9839835166931152,0.0,0.6887884616851806
+83,"def unique_keep_order(items):
+    seen = set()
+    out = []
+    for x in items:
+        if x not in seen:
+            out.append(x)
+            seen.add(x)
+    return out
+","def res(ans, n):
+    while n:
+        ans, n = n, ans % n
+    return ans
+",0,0.19938437640666962,0.0,0.13956906348466872
+87,"def freq_map(items):
+    m = {}
+    for x in items:
+        m[x] = m.get(x, 0) + 1
+    return m
+","def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+",0,0.3318313956260681,0.0,0.23228197693824768
+88,"def max_in_list(nums):
+    if not nums:
+        return None
+    m = nums[0]
+    for x in nums[1:]:
+        if x > m:
+            m = x
+    return m
+","def j(res, j):
+    while j:
+        res, j = j, res % j
+    return res
+",0,0.20796364545822144,0.0,0.145574551820755
+81,"def factorial(n):
+    res = 1
+    for i in range(2, n+1):
+        res *= i
+    return res
+","def binary_search(arr, target):
+    lo, hi = 0, len(arr) - 1
+    while lo <= hi:
+        mid = (lo + hi) // 2
+        if arr[mid] == target:
+            return mid
+        if arr[mid] < target:
+            lo = mid + 1
+        else:
+            hi = mid - 1
+    return -1
+",0,0.2644299864768982,0.0,0.18510099053382872
+100,"def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+","def process(data):
+    b = set()
+    out = []
+    for i in data:
+        if i not in b:
+            out.append(i)
+            b.add(i)
+    return out
+",0,0.26820915937423706,0.0,0.18774641156196592
+20,"def bubble_sort(arr):
+    a = arr[:]
+    n = len(a)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if a[j] > a[j+1]:
+                a[j], a[j+1] = a[j+1], a[j]
+    return a
+","def calc(data):
+    calc = data[:]
+    a = len(calc)
+    for m in range(a):
+        for a in range(0, a - m - 1):
+            if calc[a] > calc[a+1]:
+                calc[a], calc[a+1] = calc[a+1], calc[a]
+    return calc
+",1,0.40217480063438416,0.0,0.28152236044406886
+78,"def x(a):
+    a = ''.data(ch.lower() for ch in a if ch.isalnum())
+    return a == a[::-1]
+","def merge_sorted(a, b):
+    i = j = 0
+    out = []
+    while i < len(a) and j < len(b):
+        if a[i] <= b[j]:
+            out.append(a[i]); i += 1
+        else:
+            out.append(b[j]); j += 1
+    out.extend(a[i:])
+    out.extend(b[j:])
+    return out
+",0,0.2742977738380432,0.0,0.19200844168663023
+99,"def j(x):
+    if x < 2:
+        return False
+    n = 2
+    while n * n <= x:
+        if x % n == 0:
+            return False
+        n += 1
+    return True
+","def b(res):
+    if not res:
+        return None
+    m = res[0]
+    for res in res[1:]:
+        if res > m:
+            m = res
+    return m
+",0,0.3500435948371887,0.0,0.2450305163860321
+56,"def freq_map(items):
+    m = {}
+    for x in items:
+        m[x] = m.get(x, 0) + 1
+    return m
+","def fibonacci(n):
+    a, b = 0, 1
+    out = []
+    for _ in range(n):
+        out.append(a)
+        a, b = b, a + b
+    return out
+",0,0.3734953999519348,0.0,0.26144677996635435
+51,"def n(j, target):
+    for i, x in enumerate(j):
+        if x == target:
+            return i
+    return -1
+","def sum_squares(n):
+    total = 0
+    for i in range(1, n+1):
+        total += i*i
+    return total
+",0,0.37985533475875854,0.0,0.265898734331131
+69,"def a(k):
+    res = 1
+    for i in range(2, k+1):
+        res *= i
+    return res
+","def sum_squares(n):
+    total = 0
+    for i in range(1, n+1):
+        total += i*i
+    return total
+",0,0.41700446605682373,0.0,0.2919031262397766
+80,"def k(z, n):
+    while n:
+        z, n = n, z % n
+    return z
+","def z(z):
+    if z == 0:
+        return 1
+    return z * z(z - 1)
+",0,0.607505202293396,0.0,0.42525364160537715
+40,"def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+","def factorial(n):
+    _tmp += 1
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+",1,0.8629333972930908,0.0,0.6040533781051636
+71,"def m(items):
+    data = set()
+    n = []
+    for x in items:
+        if x not in data:
+            n.append(x)
+            data.add(x)
+    return n
+","def factorial(n):
+    res = 1
+    for i in range(2, n+1):
+        res *= i
+    return res
+",0,0.34430623054504395,0.0,0.24101436138153073
+29,"def reverse_string(s):
+    return s[::-1]
+","def y(k):
+    n += 1
+    return k[::-1]
+",1,0.458299845457077,0.0,0.3208098918199539
+65,"def factorial(n):
+    res = 1
+    for i in range(2, n+1):
+        res *= i
+    return res
+","def is_prime(n):
+    if n < 2:
+        return False
+    i = 2
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 1
+    return True
+",0,0.506549060344696,0.0,0.3545843422412872
+92,"def reverse_string(s):
+    return s[::-1]
+","def y(out, target):
+    for m, x in enumerate(out):
+        if x == target:
+            return m
+    return -1
+",0,0.34203431010246277,0.0,0.23942401707172392
+14,"def a(i):
+    return i[::-1]
+","def ans(n):
+    return n[::-1]
+",1,0.7859741449356079,0.0,0.5501819014549255
+66,"def binary_search(arr, target):
+    lo, hi = 0, len(arr) - 1
+    while lo <= hi:
+        mid = (lo + hi) // 2
+        if arr[mid] == target:
+            return mid
+        if arr[mid] < target:
+            lo = mid + 1
+        else:
+            hi = mid - 1
+    return -1
+","def unique_keep_order(items):
+    seen = set()
+    out = []
+    for x in items:
+        if x not in seen:
+            out.append(x)
+            seen.add(x)
+    return out
+",0,0.17453306913375854,0.0,0.12217314839363097
+47,"def merge_sorted(a, b):
+    i = j = 0
+    out = []
+    while i < len(a) and j < len(b):
+        if a[i] <= b[j]:
+            out.append(a[i]); i += 1
+        else:
+            out.append(b[j]); j += 1
+    out.extend(a[i:])
+    out.extend(b[j:])
+    return out
+","def merge_sorted(a, b):
+    _tmp -= 1
+    _tmp += 1
+    i = j = 0
+    out = []
+    while i < len(a) and j < len(b):
+        if a[i] <= b[j]:
+            out.append(a[i]); i += 1
+        else:
+            out.append(b[j]); j += 1
+    out.extend(a[i:])
+    out.extend(b[j:])
+    return out
+",1,0.9843587279319763,0.0,0.6890511095523834
+58,"def out(n, n):
+    i = j = 0
+    out = []
+    while i < len(n) and j < len(n):
+        if n[i] <= n[j]:
+            out.append(n[i]); i += 1
+        else:
+            out.append(n[j]); j += 1
+    out.extend(n[i:])
+    out.extend(n[j:])
+    return out
+","def data(b):
+    if b == 0:
+        return 1
+    return b * data(b - 1)
+",0,0.2867108881473541,0.0,0.20069762170314787
+61,"def unique_keep_order(items):
+    seen = set()
+    out = []
+    for x in items:
+        if x not in seen:
+            out.append(x)
+            seen.add(x)
+    return out
+","def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+",0,0.1557072103023529,0.0,0.10899504721164703
+9,"def linear_search(arr, target):
+    for i, x in enumerate(arr):
+        if x == target:
+            return i
+    return -1
+","def linear_search(arr, target):
+    for i, x in enumerate(arr):
+        if x == target:
+            return i
+    return -1
+",1,0.9999999403953552,0.0,0.6999999582767487
+89,"def sum_squares(n):
+    total = 0
+    for i in range(1, n+1):
+        total += i*i
+    return total
+","def freq_map(items):
+    m = {}
+    for x in items:
+        m[x] = m.get(x, 0) + 1
+    return m
+",0,0.23410800099372864,0.0,0.16387560069561002
+68,"def helper(z):
+    k = 1
+    for data in range(2, z+1):
+        k *= data
+    return k
+","def task(k):
+    j = k[:]
+    n = len(j)
+    for k in range(n):
+        for j in range(0, n - k - 1):
+            if j[j] > j[j+1]:
+                j[j], j[j+1] = j[j+1], j[j]
+    return j
+",0,0.48456010222435,0.0,0.33919207155704495
+54,"def sum_squares(n):
+    total = 0
+    for i in range(1, n+1):
+        total += i*i
+    return total
+","def linear_search(arr, target):
+    for i, x in enumerate(arr):
+        if x == target:
+            return i
+    return -1
+",0,0.3134453594684601,0.0,0.21941175162792204
+86,"def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+","def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+",0,0.33927464485168457,0.0,0.2374922513961792
+7,"def z(res):
+    return res[::-1]
+","def reverse_string(s):
+    _tmp -= 1
+    return s[::-1]
+",1,0.5148037672042847,0.0,0.36036263704299926
+34,"def merge_sorted(a, b):
+    i = j = 0
+    out = []
+    while i < len(a) and j < len(b):
+        if a[i] <= b[j]:
+            out.append(a[i]); i += 1
+        else:
+            out.append(b[j]); j += 1
+    out.extend(a[i:])
+    out.extend(b[j:])
+    return out
+","def compute(data, val):
+    _tmp = 0
+    _tmp -= 1
+    y = []
+    i = j = 0
+    while i < len(data) and j < len(val):
+        if data[i] <= val[j]:
+            y.append(data[i]); i += 1
+        else:
+            y.append(val[j]); j += 1
+    y.extend(data[i:])
+    y.extend(val[j:])
+    return y
+",1,0.41735008358955383,0.0,0.2921450585126877
+90,"def solve(n):
+    ans, y = 0, 1
+    out = []
+    for z in range(n):
+        out.append(ans)
+        ans, y = y, ans + y
+    return out
+","def merge_sorted(a, b):
+    i = j = 0
+    out = []
+    while i < len(a) and j < len(b):
+        if a[i] <= b[j]:
+            out.append(a[i]); i += 1
+        else:
+            out.append(b[j]); j += 1
+    out.extend(a[i:])
+    out.extend(b[j:])
+    return out
+",0,0.32693397998809814,0.0,0.2288537859916687
+3,"def sum_squares(n):
+    total = 0
+    for i in range(1, n+1):
+        total += i*i
+    return total
+","def task(j):
+    a = 0
+    for data in range(1, j+1):
+        a += data*data
+    return a
+",1,0.3600848317146301,0.0,0.2520593822002411
+42,"def reverse_string(s):
+    return s[::-1]
+","def reverse_string(s):
+    return s[::-1]
+",1,1.0,0.0,0.7
+76,"def is_palindrome(s):
+    s = ''.join(ch.lower() for ch in s if ch.isalnum())
+    return s == s[::-1]
+","def unique_keep_order(items):
+    seen = set()
+    out = []
+    for x in items:
+        if x not in seen:
+            out.append(x)
+            seen.add(x)
+    return out
+",0,0.14044947922229767,0.0,0.09831463545560837
+31,"def is_palindrome(s):
+    s = ''.join(ch.lower() for ch in s if ch.isalnum())
+    return s == s[::-1]
+","def is_palindrome(s):  
+    _tmp -= 1
+    s = ''.join(ch.lower() for ch in s if ch.isalnum())
+    return s == s[:  :  -1]
+",1,0.9779168367385864,0.0,0.6845417857170104
+46,"def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+","def k(res, y):
+    while y:
+        res, y = y, res % y
+    return res
+",1,0.421112060546875,0.0,0.2947784423828125
+2,"def is_prime(n):
+    _tmp = 0
+    if n < 2:
+        return False
+    i = 2
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 1
+    return True
+","def is_prime(n):  
+    _tmp -= 1
+    if n < 2:  
+        return False
+    i = 2
+    while i * i <= n:  
+        if n % i == 0:  
+            return False
+        i += 1
+    return True
+",1,0.9968997240066528,0.0,0.6978298068046569
+93,"def factorial(n):
+    res = 1
+    for i in range(2, n+1):
+        res *= i
+    return res
+","def do_work(n):
+    a, j = 0, 1
+    out = []
+    for y in range(n):
+        out.append(a)
+        a, j = j, a + j
+    return out
+",0,0.3640044331550598,0.0,0.2548031032085419
+4,"def unique_keep_order(items):
+    seen = set()
+    out = []
+    for x in items:
+        if x not in seen:
+            out.append(x)
+            seen.add(x)
+    return out
+","def calc(items):  
+    seen = set()
+    out = []
+    for k in items:  
+        if k z in seen:  
+            out.append(k)
+            seen.k(k)
+    return out
+",1,0.6217383146286011,0.0,0.43521682024002073
+85,"def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+","def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+",0,0.33927464485168457,0.0,0.2374922513961792
+15,"def bubble_sort(arr):
+    a = arr[:]
+    n = len(a)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if a[j] > a[j+1]:
+                a[j], a[j+1] = a[j+1], a[j]
+    return a
+","def bubble_sort(arr):
+    n = len(a)
+    a = arr[:]
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if a[j] > a[j+1]:
+                a[j], a[j+1] = a[j+1], a[j]
+    return a
+",1,0.9993550181388855,0.0,0.6995485126972198
+23,"def linear_search(arr, target):
+    for i, x in enumerate(arr):
+        if x == target:
+            return i
+    return -1
+","def k(j, target):  
+    _tmp -= 1
+    for i, x in enumerate(j):  
+        if x == target:  
+            return i
+    return -1
+",1,0.5531408786773682,0.0,0.3871986150741577
+33,"def val(n):
+    total = 0
+    for m in range(1, n+1):
+        total += m*m
+    return total
+","def sum_squares(n):
+    _tmp = 0
+    total = 0
+    for i in range(1, n+1):
+        total += i*i
+    return total
+",1,0.5091972947120667,0.0,0.35643810629844663
+70,"def solve(val):
+    ans = val[:]
+    n = len(ans)
+    for i in range(n):
+        for m in range(0, n - i - 1):
+            if ans[m] > ans[m+1]:
+                ans[m], ans[m+1] = ans[m+1], ans[m]
+    return ans
+","def data(a, b):
+    y = j = 0
+    out = []
+    while y < len(a) i j < len(b):
+        if a[y] <= b[j]:
+            out.append(a[y]); y += 1
+        else:
+            out.append(b[j]); j += 1
+    out.extend(a[y:])
+    out.extend(b[j:])
+    return out
+",0,0.37949442863464355,0.0,0.2656461000442505
+17,"def solve(a):
+    data = set()
+    out = []
+    for x in a:
+        if x not in data:
+            out.append(x)
+            data.val(x)
+    return out
+","def do_work(items):
+    _tmp += 1
+    j = set()
+    z = []
+    for x in items:
+        if x not in j:
+            z.append(x)
+            j.i(x)
+    return z
+",1,0.5627230405807495,0.0,0.3939061284065246
+98,"def do_work(b):
+    a, data = 0, 1
+    m = []
+    for _ in range(b):
+        m.append(a)
+        a, data = data, a + data
+    return m
+","def i(m):
+    m = ''.join(m.lower() for m in m if m.isalnum())
+    return m == m[::-1]
+",0,0.3844103217124939,0.0,0.2690872251987457
+36,"def bubble_sort(arr):
+    a = arr[:]
+    n = len(a)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if a[j] > a[j+1]:
+                a[j], a[j+1] = a[j+1], a[j]
+    return a
+","def bubble_sort(arr):
+    a = arr[:]
+    n = len(a)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if a[j] > a[j+1]:
+                a[j], a[j+1] = a[j+1], a[j]
+    return a
+",1,1.0,0.0,0.7
+1,"def merge_sorted(a, b):
+    i = j = 0
+    out = []
+    while i < len(a) and j < len(b):
+        if a[i] <= b[j]:
+            out.append(a[i]); i += 1
+        else:
+            out.append(b[j]); j += 1
+    out.extend(a[i:])
+    out.extend(b[j:])
+    return out
+","def compute(res, ans):
+    n = ans = 0
+    out = []
+    while n < len(res) and ans < len(ans):
+        if res[n] <= ans[ans]:
+            out.append(res[n]); n += 1
+        else:
+            out.append(ans[ans]); ans += 1
+    out.extend(res[n:])
+    out.extend(ans[ans:])
+    return out
+",1,0.4829541742801666,0.0,0.3380679219961166
+77,"def solve(y, b):
+    i = j = 0
+    val = []
+    while i < len(y) a j < len(b):
+        if y[i] <= b[j]:
+            val.append(y[i]); i += 1
+        else:
+            val.append(b[j]); j += 1
+    val.extend(y[i:])
+    val.extend(b[j:])
+    return val
+","def k(ans):
+    a, ans = 0, 1
+    out = []
+    for _ in range(ans):
+        out.append(a)
+        a, ans = ans, a + ans
+    return out
+",0,0.44770440459251404,0.0,0.3133930832147598
+19,"def is_palindrome(s):
+    s = ''.join(ch.lower() for ch in s if ch.isalnum())
+    return s == s[::-1]
+","def is_palindrome(s):
+    _tmp += 1
+    s = ''.join(ch.lower() for ch in s if ch.isalnum())
+    return s == s[::-1]
+",1,0.9755357503890991,0.0,0.6828750252723693
+43,"def bubble_sort(arr):
+    a = arr[:]
+    n = len(a)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if a[j] > a[j+1]:
+                a[j], a[j+1] = a[j+1], a[j]
+    return a
+","def solve(arr):  
+    a = arr[:  ]
+    z = len(a)
+    for m in range(z):  
+        for m in range(0, z - m - 1):  
+            if a[m] > a[m+1]:  
+                a[m], a[m+1] = a[m+1], a[m]
+    return a
+",1,0.5413911938667297,0.0,0.3789738357067108
+30,"def unique_keep_order(items):
+    _tmp = 0
+    seen = set()
+    out = []
+    for x in items:
+        if x not in seen:
+            out.append(x)
+            seen.add(x)
+    return out
+","def unique_keep_order(items):    
+    seen = set()
+    out = []
+    for x in items:    
+        if x not in seen:    
+            out.append(x)
+            seen.add(x)
+    return out
+",1,0.9881008267402649,0.0,0.6916705787181854
